@@ -1,0 +1,426 @@
+// IMPORTS
+@import "headerAndFooter";
+@import "variables";
+@import "grid-main";
+@import "nav";
+@import "images";
+// media querie import at bottom because of cascade order
+
+// MIXINS
+// mixin for hover effect
+@mixin scale {
+  transform: scale(1.03);
+  transition: transform 0.5s;
+}
+
+@mixin descale {
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+// mixin for click
+@mixin buttonClick {
+  background-color: black;
+  transition: background-color 0.1s;
+}
+// mixin card text
+@mixin cardsText {
+  font-weight: 600;
+  text-align: center;
+  h3 {
+    margin: 1.5rem 0;
+    font-size: 3.5rem;
+    color: map-get($mapColorsOrange, orange5);
+    text-shadow: 5px 5px 20px lightpink;
+    span {
+      font-size: 2.5rem;
+      color: map-get($mapColorsOrange, orange7);
+    }
+  }
+  ul {
+    list-style: none;
+    font-size: 1.6rem;
+    li {
+      text-align: left;
+      font-weight: 600;
+      &::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        color: map-get($mapColorsBlue, blue7);
+        padding: 8px;
+      }
+    }
+  }
+  p {
+    line-height: 1.8rem;
+  }
+  p.price {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  // card headline styles
+  h4 {
+    text-align: center;
+    color: rgb(6, 80, 6); //headline green
+    font-size: 2rem;
+    margin: 1.5rem 1rem;
+  }
+  .card-text {
+    font-size: 1.5rem;
+  }
+  // price area
+  h6[class*="ice-"] {
+    font-family: Georgia, "Times New Roman", Times, serif; //different font for price
+    font-size: 6rem;
+    font-weight: 500;
+
+    span {
+      font-size: 0.8em;
+    }
+  }
+}
+// mixin cards container
+@mixin cardsContainer {
+  // border: 1px solid red; //marker for cards container
+  display: flex;
+  height: fit-content;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  gap: 15px;
+}
+// mixin card items
+@mixin cardItem {
+  position: relative;
+  flex-basis: 250px;
+  background-color: map-get($mapColorsGray, gray1);
+  border-radius: $borderRadiusCards;
+  border-top: $borderTop;
+  border-right: $borderSide;
+  border-left: $borderSide2;
+  box-shadow: map-get($mapShadows, shadowRoughReverse), $shadownInsetBlue;
+  &:nth-child(odd) {
+    //middle card above
+    align-self: flex-end;
+  }
+  &:hover {
+    // growing images on hover
+    @include scale;
+  }
+  &:not(:hover) {
+    @include descale;
+  }
+}
+
+// basic reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// root selector
+:root {
+  // set root font-size to 10px
+  font-size: 62.5%;
+
+  // transition: all 5s;      //acid test
+}
+
+body {
+  font-family: "Montserrat", sans-serif; //page Font definition
+  background: linear-gradient(
+    $light,
+    map-get($mapColorsOrange, orange3)
+  ); //background for whole page
+}
+
+// HEADLINES
+@mixin headline {
+  width: fit-content;
+  color: map-get($mapColorsOrange, orange8);
+  margin: 5rem auto;
+  // costom underline
+  div[class*="underline"] {
+    background: $underlineBlue;
+    width: 100%;
+    height: 2px;
+    margin-left: auto;
+  }
+  .headline-blue + div {
+    background: $underlineOrange2;
+  }
+}
+.container-headline {
+  @include headline;
+}
+
+// headline variations (the last 2)
+.headline2 {
+  font-size: 3.1rem; //h2 headline size
+  margin-top: 7rem;
+}
+.headline-blue {
+  color: map-get($mapColorsBlue, blue7); //last 2 headlines color: blue
+}
+
+// ABOUT
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p {
+    width: 86%;
+    margin: 0 auto;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 29px;
+    color: $black;
+    padding: 25px 3.5rem;
+    border-left: 3px solid map-get($mapColorsGray, gray3);
+    border-right: 1px solid map-get($mapColorsGray, gray3);
+    //fisrt letter bigger
+    &::first-letter {
+      font-weight: bold;
+      font-size: 3rem;
+    }
+  }
+}
+
+// FARM GALLERY
+.farm-gallery {
+  .container-farm-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+    img[class*="farm-img"] {
+      width: 350px;
+      height: auto;
+      filter: sepia(0.3); // color filter for images
+      box-shadow: map-get($mapShadows, shadowRough); // element shadows
+      border-radius: $borderRadiusCards; //round corners
+      &:hover {
+        @include scale; // hover effect
+      }
+      &:not(:hover) {
+        @include descale; //reverse effect when mouse not hovers anymore
+      }
+    }
+  }
+}
+// ALPACA GALLERY
+
+// FLEX SCROLL ALPS
+.container-alp-images {
+  display: flex;
+  width: 100%;
+  padding: 5rem;
+  overflow-y: hidden;
+  overflow-x: scroll; //horizontal scrollbar in small format
+  gap: 60px;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  background-color: map-get($mapColorsOrange, orange2);
+  border-radius: 1rem;
+  box-shadow: map-get($mapShadows, shadowRough);
+  div[class*="alp-image"] {
+    width: 150px;
+    // flex-basis: 150px;
+    flex-shrink: 0;
+    height: 150px;
+    &:hover {
+      @include scale;
+    }
+    &:not(:hover) {
+      @include descale;
+    }
+  }
+}
+
+// CARD STYLES
+
+// TOURS
+.container-tours {
+  .container-tour-cards {
+    // border: 2px solid;
+    gap: 2px;
+    @include cardsContainer;
+    > div {
+      @include cardItem;
+      @include cardsText;
+      height: 350px;
+      .card-bottom {
+        position: absolute;
+        bottom: 0;
+        height: 45%;
+        width: 100%;
+        // border: 8px solid red;
+      }
+      // Tour Cards Styles Gradien and Shadow
+      &.tour-card1 {
+        background: radial-gradient(
+          rgba(255, 255, 11, 0.06) 10%,
+          map-get($mapColorsBlue, blue2) 80%
+        );
+      }
+      &.tour-card2 {
+        background: radial-gradient(
+          rgba(255, 255, 11, 0.06) 10%,
+          map-get($mapColorsBlue, blue4) 80%
+        );
+      }
+      &.tour-card3 {
+        background: radial-gradient(
+          rgba(255, 255, 11, 0.06) 10%,
+          map-get($mapColorsBlue, blue1) 80%
+        );
+      }
+    }
+  }
+}
+
+// TOUR CARDS PRICE COLORS
+
+.price {
+  color: blue;
+}
+
+.price-1 {
+  color: rgb(190, 137, 3);
+}
+
+.price-2 {
+  color: rgb(12, 133, 12);
+}
+
+.price-3 {
+  color: rgb(119, 156, 44);
+}
+
+// Button
+.btn {
+  background-color: map-get($mapColorsBlue, blue8);
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 12px 12px 23px white inset;
+  box-shadow: map-get($mapShadows, shadowRoughReverseWide);
+  &:active {
+    @include buttonClick;
+  }
+}
+.book-now {
+  width: clamp(50px, 50%, 400px); //responsive button width
+  margin-left: 50%; //centering button (step1)
+  transform: translateX(-50%); //centering button (step2)
+}
+
+// ACCOMODATIONS
+
+.container-accomodation-cards {
+  @include cardsContainer;
+  .acc-card {
+    @include cardItem;
+    @include cardsText;
+    height: 340px;
+    background-color: map-get($mapColorsOrange, orange5);
+    &:hover {
+      @include scale;
+    }
+    .acc-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: $borderRadiusCardImages;
+    }
+    .card-bottom {
+      position: relative; //position text (step1)
+      bottom: -20px; // position text (step2)
+      height: 50%;
+      // border: 8px solid red;
+    }
+  }
+}
+
+// SHOP
+.container-shop {
+  @include cardsContainer;
+  div[class*="shop-card"] {
+    @include cardItem;
+    @include cardsText;
+    height: 340px;
+    &:hover {
+      @include scale;
+    }
+    [class*="shop-image"] {
+      width: 100%;
+      height: 40%;
+      border-radius: $borderRadiusCards $borderRadiusCards 0 0;
+    }
+  }
+}
+
+// CONTACTFORM
+.contact {
+  form {
+    width: 100%;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 3rem;
+    border-top: 1px solid map-get($mapColorsGray, gray2); //different border at top
+    border-radius: 1rem;
+    box-shadow: 1px 6px 8px -1px gray; //contact shadow
+    label {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    :is(label, input, textarea) {
+      width: 70%;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    :is(input, textarea) {
+      border: 1px solid map-get($mapColorsGray, gray4); //replace browser input border
+      padding: 1rem;
+      background-color: map-get(
+        $mapColorsGray,
+        gray1
+      ); //darken the inputs a bit
+      &:focus {
+        outline: none; //removes browser default input outline on focus
+        border-color: map-get($mapColorsOrange, orange7);
+        background-color: rgb(191, 255, 191); // inputs bg gets green on focus
+        transition: background-color 0.5s;
+        &::placeholder {
+          color: transparent; //placeholder text disapears when focus
+          transition: color 0.5s;
+        }
+      }
+    }
+    // form submit button styles
+    .btn {
+      background-color: rgba(83, 24, 83, 0.6); //form submit button custon color
+      width: clamp(80px, 30%, 170px);
+      align-self: flex-start;
+      margin-left: 15%;
+      &:active {
+        @include buttonClick; // black on click
+      }
+    }
+  }
+}
+
+p {
+  margin: 1em;
+}
+
+@import "mediaqueries"; // importet here because it didn't work at top
