@@ -1,0 +1,58 @@
+// this makes each middle card higher
+@media (min-width: 1000px) {
+  .container-tours {
+    div.container-tour-cards {
+      height: 450px;
+    }
+  }
+  .container-accomodation-cards {
+    height: 450px;
+  }
+  .container-shop {
+    height: 450px;
+  }
+}
+
+// @media (min-width: 500px) {
+//     .container-header {
+//         height: 400px;
+//     }
+// }
+
+@media (min-width: 830px) {
+  .container-header {
+    height: 500px;
+  }
+  .container-alp-images {
+    // border: 10px solid red;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 40% 40%;
+
+    div[class*="alp-image"] {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav {
+    ul.drop-down-menu {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-header {
+    height: 700px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .acard {
+    flex-grow: 1;
+  }
+}

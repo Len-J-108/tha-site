@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lennart Jansen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font Awesome implementation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- linked Font-style -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Der Alpaka Hof</title>
+    <!-- FavIcon implementation -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/favicon_io/favicon.ico"
+    />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Wrapper for Everything -->
+    <div class="wrapper-all">
+      <!-- Header Start -->
+      <header class="container-header">
+        <div class="header-top">
+          <!-- Alpaca Logo -->
+          <img src="/assets/images/logo/alpaca.svg" alt="alpaca-logo" />
+          <!-- H1 -->
+          <h1>Der Alpaka-Hof</h1>
+          <!-- Navigation -->
+          <nav class="nav">
+            <ul class="drop-down-menu">
+              <div class="drop-down-btn" href="#"></div>
+              <!--dropdown toggle for later use-->
+              <li class="drop-down-item"><a href="#about">über uns</a></li>
+              <li class="drop-down-item"><a href="#farm-gallery">hof</a></li>
+              <li class="drop-down-item">
+                <a href="#alpaca-gallery">tiere</a>
+              </li>
+              <li class="drop-down-item"><a href="#tours">Touren</a></li>
+              <li class="drop-down-item">
+                <a href="#accomodations">unterbringung</a>
+              </li>
+              <li class="drop-down-item"><a href="#shop">laden</a></li>
+              <li class="drop-down-item"><a href="#contact">kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Header Image -->
+        <div class="header-image"></div>
+      </header>
+      <!-- About Section -->
+      <section class="about" id="about">
+        <!---headline container-->
+        <div class="container-headline">
+          <h2 class="headline2">Über Uns</h2>
+          <div class="underline-1"></div>
+        </div>
+        <!-- About Pargraph -->
+        <p class="para-free">
+          Unser Alpaka-Hof in Elmenhorst ist für sie geöffnet. Buchen sie gerne
+          eine Tour über 1 oder mehrere Tage. Ein Erlebnis für die ganze
+          Familie. Besuchen sie unsere Alpakaherde, stöbern sie in unserem
+          Hofladen oder gehen im Angrenzenden Wald spazieren.
+        </p>
+      </section>
+      <!-- Farm Gallery Section START -->
+      <section class="farm-gallery" id="farm-gallery">
+        <!--headline container-->
+        <div class="container-headline">
+          <h2 class="headline2">Unser Hof</h2>
+          <div class="underline-1"></div>
+        </div>
+        <div class="container-farm-images">
+          <!--container farm images-->
+          <img
+            src="/assets/images/farm/StockSnap_QZZC02VYSS.jpg"
+            alt="bild einer kuh"
+            class="farm-img farm-item"
+            title="Kuf auf Weide"
+          />
+          <!--farm image 1-->
+          <img
+            src="/assets/images/farm/StockSnap_BWRCGCOECB.jpg"
+            alt="bild vom pferd"
+            class="farm-img farm-item"
+            title="Pferd auf Koppel"
+          />
+          <!--farm image 2-->
+          <img
+            src="/assets/images/farm/StockSnap_V9YD0J883E.jpg"
+            alt="bild von einem huhn"
+            class="farm-img farm-item"
+            title="Huhn"
+          />
+          <!--farm image 3-->
+          <img
+            src="/assets/images/farm/StockSnap_49FA273DDD.jpg"
+            alt="bild aus werkstatt"
+            class="farm-img farm-item"
+            title="Werkstatt"
+          />
+          <!--farm image 4-->
+        </div>
+      </section>
+      <!-- Farm Gallery Section END -->
+
+      <!-- Alpaca  Gallery Section START -->
+      <section class="alp-gallery" id="alpaca-gallery">
+        <div class="container-headline">
+          <!--headline container-->
+          <h2 class="headline2">Die Alpaka Herde</h2>
+          <div class="underline-2"></div>
+        </div>
+        <!--alpaca images container-->
+        <div class="container-alp-images">
+          <!--divs for alpaca images as background-images-->
+          <div class="single-alp-image1"></div>
+          <div class="single-alp-image2"></div>
+          <div class="single-alp-image3"></div>
+          <div class="single-alp-image4"></div>
+          <div class="single-alp-image5"></div>
+          <div class="single-alp-image6"></div>
+        </div>
+      </section>
+      <!-- Alpaca Gallery Section END -->
+
+      <!-- Tours START -->
+      <main class="container-tours" id="tours">
+        <!--main-->
+        <!--headline container-->
+        <div class="container-headline">
+          <h2 class="headline2">Betreute Touren</h2>
+          <div class="underline-1"></div>
+        </div>
+        <!-- Tours Container -->
+        <div class="container-tour-cards">
+          <!-- Tours Card 1 -->
+          <div class="acard tour-card1">
+            <h3>1 <span>Tag</span></h3>
+            <h4>Erkunden Sie unseren Hof für einen Tag</h4>
+            <!-- Card 1 list -->
+            <ul>
+              <li>Alpaka Führung</li>
+              <li>Abendessen</li>
+              <li>Kräuterwanderung</li>
+            </ul>
+            <!-- card 1 bottom -->
+            <div class="card-bottom">
+              <p class="price">Preise ab:</p>
+              <h6 class="price-1">45<span>&euro;</span></h6>
+            </div>
+          </div>
+          <!-- card 1 end -->
+          <!-- Tours Card 2 -->
+          <div class="acard tour-card2">
+            <h3>2 <span>Tage</span></h3>
+            <h4>Mit Übernachtung</h4>
+            <!-- Card 2 list -->
+            <ul>
+              <li>Eigene Blockhütte</li>
+              <li>Alpaka Führung</li>
+              <li>Bademöglichkeiten</li>
+            </ul>
+            <!-- card 2 bottom -->
+            <div class="card-bottom">
+              <p class="price">Preise ab:</p>
+              <h6 class="price-2">70<span>&euro;</span></h6>
+            </div>
+          </div>
+          <!-- Card 2 end -->
+
+          <!-- Tours Card 3 -->
+          <div class="acard tour-card3">
+            <h3>3 <span>Tage</span></h3>
+            <h4>Bleiben Sie von Freitag bis Sonntag.</h4>
+            <!-- Card 3 List -->
+            <ul>
+              <li>Apaka Reitkurs</li>
+              <li>2.Übernachtungen</li>
+              <li>Weinverkostung</li>
+            </ul>
+            <!-- Card 3 Bottom -->
+            <div class="card-bottom">
+              <p class="price">Preise ab:</p>
+              <h6 class="price-3">110<span>&euro;</span></h6>
+            </div>
+          </div>
+          <!-- Card 3 end -->
+        </div>
+        <!-- Booking Button -->
+        <button class="book-now btn">Buchen Sie Jetzt</button>
+      </main>
+      <!-- Tours END -->
+
+      <!-- Accomodation Section START -->
+      <section class="container-accomodation" id="accomodations">
+        <!-- headline container -->
+        <div class="container-headline">
+          <h2 class="headline2">Unterbringung</h2>
+          <div class="underline-1"></div>
+        </div>
+        <!-- ACC Cards Container -->
+        <div class="container-accomodation-cards">
+          <!-- Acc Card 1 -->
+          <div class="acc-card acard">
+            <!--Image -->
+            <img
+              class="acc-image"
+              src="/assets/images/accommodation/StockSnap_BD0AC07780.jpg"
+              alt="Innenansicht mit Lampe"
+            />
+            <!-- Acc Card 1 Bottom -->
+            <div class="card-bottom">
+              <h4>Antik</h4>
+              <p class="card-text">
+                Genießen Sie den Charme unseres Fachwerkhauses aus dem Jahre
+                1820. Machen Sie unsere historische Fürung mit!
+              </p>
+            </div>
+          </div>
+          <!-- Acc Card 2 -->
+          <div class="acc-card acard">
+            <!-- Image -->
+            <img
+              class="acc-image"
+              src="/assets/images/accommodation/StockSnap_T0BHAFEFFR.jpg"
+              alt="Innenansicht mit Lampe"
+            />
+            <!-- Acc Card 2 Bottom -->
+            <div class="card-bottom">
+              <h4>Gemütlich</h4>
+              <p class="card-text">
+                Mieten Sie sich in eins unserer am Waldrand gelegenen
+                Blockhütten ein. Perfekt für kleine Familien.
+              </p>
+            </div>
+          </div>
+          <!-- Acc Card 3 -->
+          <div class="acc-card acard">
+            <!-- Image -->
+            <img
+              class="acc-image"
+              src="/assets/images/accommodation/StockSnap_XTRAJDQIPV.jpg"
+              alt="Innenansicht mit Lampe"
+            />
+            <!-- Acc-Card-Bottom -->
+            <div class="card-bottom">
+              <h4>Natur</h4>
+              <p class="card-text">
+                Erleben Sie die einzigartige Natur in dem angrenzenden Forst bei
+                einer unserer Waldwanderungen
+              </p>
+            </div>
+          </div>
+          <!-- Acc Card 3 End -->
+        </div>
+        <!-- Acc Cards Container End -->
+      </section>
+      <!-- Accomodation Section END -->
+
+      <!-- Shop Section START -->
+      <section class="shop" id="shop">
+        <!-- Headline Container -->
+        <div class="container-headline">
+          <h2 class="headline2 headline-blue">Der Hofladen</h2>
+          <div class="underline-1"></div>
+        </div>
+        <!-- Shop Cards Container Start -->
+        <div class="container-shop">
+          <!-- Shop Card 1 -->
+          <div class="shop-card1 acard">
+            <!-- image -->
+            <img
+              class="shop-image-1"
+              src="/assets/images/farm-shop/StockSnap_E4J3BP6ZNJ.jpg"
+              alt="bild der gemüse auslage"
+            />
+            <!--Shop Card 1 Bottom-->
+            <div class="card-bottom">
+              <h4>Obst und Gemüse</h4>
+              <p class="card-text">
+                Auf unseren 10 hectar Ackerfläche bauen wir saisonal
+                verschiedenste Sorten Gemüse, Obst, salate und Kräuter an und
+                bieten sie zum Verkauf.
+              </p>
+            </div>
+          </div>
+          <!-- Shop Card 2 -->
+          <div class="shop-card2 acard">
+            <!-- image -->
+            <img
+              class="shop-image-2"
+              src="/assets/images/farm-shop/StockSnap_NKU48AAAWF.jpg"
+              alt="bild der backwaren"
+            />
+            <!-- Shop Card 2 Bottom -->
+            <div class="card-bottom">
+              <h4>Selbst gebackenes Brot</h4>
+              <p class="card-text">
+                In Kooperation mit dem Müller aus der Nachbarschaft wird
+                regelmäßig verschiedene Brote und Brötchen hergestellt.
+              </p>
+            </div>
+          </div>
+          <!-- Shop Card 3 -->
+          <div class="shop-card3 acard">
+            <!-- Image -->
+            <img
+              class="shop-image-3"
+              src="/assets/images/farm-shop/StockSnap_THXU08ODDE.jpg"
+              alt="bild von Kaffee"
+            />
+            <!-- Shop Card 3 Bottom -->
+            <div class="card-bottom">
+              <h4>Kaffee und Kuchen</h4>
+              <p class="card-text">
+                Wer sich bei Kaffee und Kuchen entspannen will kann gerne bis 16
+                Uhr im Hauseigenen Café vorbeikomen.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Shop Cards Container End -->
+      </section>
+      <!-- Shop Section END -->
+
+      <!-- Contact -->
+      <div class="contact" id="contact">
+        <!-- Headline Container -->
+        <div class="container-headline">
+          <h2 class="headline2 headline-blue">
+            Nehmen Sie mit uns Kontakt auf
+          </h2>
+          <div class="underline-1"></div>
+        </div>
+        <!-- Form Start -->
+        <form action="#" method="post">
+          <!-- name input with label -->
+          <label for="name">Ihr Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="ihr Name..."
+            required
+            min-length="4"
+            maxlength="70"
+          />
+          <!-- email input with label -->
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="ihre email Adresse..."
+            required
+            minlength="5"
+            maxlength="30"
+            pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+          />
+          <!-- textarea for message with label -->
+          <label for="msg">Teilen Sie uns etwas mit:</label>
+          <textarea
+            name="msg"
+            id="msg"
+            cols="30"
+            rows="10"
+            placeholder="wieso...weshalb...warum..."
+          ></textarea>
+          <!-- submit button -->
+          <button class="btn" type="submit">Senden...</button>
+        </form>
+        <!-- Form End -->
+      </div>
+      <!-- Contact END -->
+
+      <!-- Footer Start -->
+      <footer class="footer">
+        <!-- Address area -->
+        <address class="address">
+          <p>Besuchen sie uns gerne:</p>
+          <p>
+            Blökenredder 1<br />
+            21493 Elmenhorst<br />
+            <a href="tel:+49 43583 88234">+49 43583 88234</a>
+          </p>
+        </address>
+        <!-- author area -->
+        <p class="brand">
+          <span class="copyright">&copy</span>by Lennart Jansen
+        </p>
+      </footer>
+      <!-- Footer END -->
+    </div>
+    <!-- Wrapper All END -->
+  </body>
+</html>

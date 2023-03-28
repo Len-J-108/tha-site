@@ -1,0 +1,74 @@
+// IMPORTS
+@import "variables";
+
+// FARM IMAGES
+// FARM IMAGES shared values
+
+[class*="farm-img"] {
+width: 60%;
+height: auto;
+filter: sepia(.3);
+}
+
+// ALPACA IMAGES
+// ALPACA IMAGES shared values
+@mixin alpImageSharedValues {
+  background-repeat: no-repeat;
+  outline: 5px solid map-get($mapColorsBlue, blue4);
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: $shadowFruits;
+  filter: sepia(.3);
+}
+
+div[class*="single-alp-image"] {
+  @include alpImageSharedValues;
+}
+
+
+// ALPACA IMAGES custom values
+.single-alp-image1 {
+  background-image: url("/assets/images/alpacas/king.jpg");
+  background-position: 60% 0%;
+  // filter: grayscale(1);
+
+}
+
+.single-alp-image2 {
+  background-image: url("/assets/images/alpacas/scotty.jpg");
+  background-position: 40% 0;
+}
+
+.single-alp-image3 {
+  background-image: url("/assets/images/alpacas/hardi.jpg");
+  background-position: 45% 0;
+}
+
+.single-alp-image4 {
+  background-image: url("/assets/images/alpacas/gismo.jpg");
+  background-position: 0 30%;
+}
+
+.single-alp-image5 {
+  background-image: url("/assets/images/alpacas/kalle.jpg");
+  background-position: 45% 0;
+}
+
+.single-alp-image6 {
+  background-image: url("/assets/images/alpacas/balou.jpg");
+  background-position: 45% 0;
+}
+
+
+// SHOP IMAGES
+.shop-image-1 {
+  object-fit:cover;
+}
+
+.shop-image-2 {
+  object-fit: cover;
+}
+
+.shop-image-3 {
+  object-fit: cover;
+}

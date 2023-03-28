@@ -1,0 +1,39 @@
+// DEFINE CONTAINER AND COLUMNS
+.wrapper-all {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+
+// GRID AREAS
+.container-header {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.about {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.farm-gallery {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.alp-gallery {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.container-tours {
+  grid-area: 5 / 2 / 6 / 3;
+}
+.container-accomodation {
+  grid-area: 6 / 2 / 7 / 3;
+}
+.shop {
+  grid-area: 7 / 2 / 8 / 3;
+}
+.contact {
+  grid-area: 8 / 2 / 9 / 3;
+}
+.map {
+  grid-area: 9 / 2 / 10 / 2;
+}
+.footer {
+  grid-area: 10 / 1 / 11 / 4;
+
+}
+// GRID AREAS END

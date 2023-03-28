@@ -1,0 +1,106 @@
+$gradientOne: linear-gradient(to right, lightyellow, orange);
+
+$markerCard: rgb(243, 176, 176);
+$markerBorder: 3px solid green;
+$red: rgba(255, 0, 0, 0.486);
+
+// colors
+$black: #070707;
+$light: #eff8ff;
+
+$mapColorsOrange: (
+  orangePrimary: #e5ae8c,
+  orange0: #fdf9f6,
+  orange1: #f9ebe3,
+  orange2: #f4dcce,
+  orange3: #efccb8,
+  orange4: #e9ba9e,
+  orange5: #dea787,
+  orange6: #c69576,
+  orange7: #aa8068,
+  orange8: #866552,
+  orange9: #4e3b30,
+);
+
+$mapColorsBlue: (
+  bluePrimary: #006fbe,
+  blue0: #f6fafd,
+  blue1: #e2eff9,
+  blue2: #cce4f5,
+  blue3: #b5d8f0,
+  blue4: #9bcaeb,
+  blue5: #7dbae5,
+  blue6: #5aa7de,
+  blue7: #2d8fd5,
+  blue8: #006fbe,
+  blue9: #004170,
+);
+
+$mapColorsGray: (
+  gray0: #f9f9fa,
+  gray1: #eceeef,
+  gray2: #dee1e3,
+  gray3: #cfd3d7,
+  gray4: #bfc5c9,
+  gray5: #adb4b9,
+  gray6: #98a1a8,
+  gray7: #7f8b93,
+  gray8: #606e79,
+  gray9: #375057,
+);
+
+// SHADOWS
+$mapShadows: (
+  shadowRough: 8px 8px 13px -5px black,
+  shadowRoughReverse: -8px 8px 13px -5px black,
+  shadowRoughReverseWide: -11px 9px 23px -7px black
+);
+
+$shadowFruits: -5px -5px 14px green, -5px -12px 14px yellow,
+  9px -10px 14px goldenrod, 8px 3px 9px blue, 8px 8px 4px -5px gray;
+
+$shadownInsetBlue: 2px 5px 7px -5px inset map-get($mapColorsBlue, blue3);
+$shadownInsetWhite: 2px 5px 12px -5px inset white;
+
+
+// Border Radius
+$borderRadiusCards: 1rem;
+$borderRadiusCardImages: 1rem 1rem 0 0;
+
+// borders
+$underline1: 3px solid map-get($mapColorsBlue, blue5);
+$underline2: 3px solid map-get($mapColorsOrange, orange6);
+
+$underlineBlue: linear-gradient(
+  to right,
+  rgba(125, 186, 230, 0),
+  rgba(125, 186, 230, 1)
+);
+
+$underlineBlue2: linear-gradient(
+  to right,
+  map-get($mapColorsBlue, blue1),
+  map-get($mapColorsBlue, blue7)
+);
+
+$underlineOrange: linear-gradient(
+  to right,
+  rgba(198, 149, 118, .3),
+  rgba(198, 149, 118, 1) ,
+  black 
+);
+
+$underlineOrange2: linear-gradient(
+  to right,
+  map-get($mapColorsOrange, orange4),
+  map-get($mapColorsOrange, orange7)
+);
+
+$borderTop:2px solid map-get($mapColorsGray, gray1);
+$borderSide: 1px solid map-get($mapColorsGray, gray3);
+$borderSide2: 1px solid map-get($mapColorsGray, gray4);
+
+
+
+// CLAMPS
+$clampCards: clamp(70px, 28%, 600px);
