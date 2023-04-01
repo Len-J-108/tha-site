@@ -39,7 +39,12 @@
 
 @media (min-width: 1000px) {
   .nav {
+    .drop-down-btn {
+      display: none;
+    }
     ul.drop-down-menu {
+      display: flex;
+      top: 10px;
       flex-direction: row;
     }
   }

@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .container-header {
   height: 300px; //Header Container height
@@ -15,11 +15,12 @@
   .header-top {
     display: flex;
     align-items: center;
+    height: 60px;
   }
   .header-image {
     height: 100%;
     background: $gradientOne;
-    background-image: url("/assets/images/a_downloaded/headers/header_3.jpg");
+    background-image: url('/assets/images/a_downloaded/headers/header_3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: lightsalmon;

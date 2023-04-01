@@ -11,6 +11,7 @@
 .container-header .header-top {
   display: flex;
   align-items: center;
+  height: 60px;
 }
 .container-header .header-image {
   height: 100%;
@@ -103,49 +104,55 @@
   grid-area: 10/1/11/4;
 }
 
-.nav ul.drop-down-menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.nav {
   position: absolute;
   top: 0;
   right: 0;
+}
+.nav .drop-down-btn {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  padding: 0 1.5rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.nav ul.drop-down-menu {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
+  width: 100%;
+  top: 50px;
   z-index: 2;
   font-weight: 800;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 1.5rem;
 }
 .nav ul.drop-down-menu .drop-down-item {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 .nav ul.drop-down-menu .drop-down-item:hover {
   background-color: #dea787;
   color: black;
-}
-.nav ul.drop-down-menu .drop-down-item a {
-  color: inherit;
-}
-.nav ul.drop-down-menu .drop-down-btn {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
-.nav ul.drop-down-menu .drop-down-btn::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f0c9";
-  font-weight: 600;
-  font-size: 4rem;
-  color: #2d8fd5;
-  position: relative;
-  top: 5px;
-}
-.nav ul.drop-down-menu .drop-down-btn:hover + .drop-down-item {
-  display: flex;
+  border-left: 3px solid #606e79;
 }
 .nav ul.drop-down-menu a {
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  padding-right: 1.5rem;
+  color: inherit;
+}
+
+.nav:hover .drop-down-menu {
+  display: flex;
 }
 
 [class*=farm-img] {
@@ -723,7 +730,12 @@ p {
   }
 }
 @media (min-width: 1000px) {
+  .nav .drop-down-btn {
+    display: none;
+  }
   .nav ul.drop-down-menu {
+    display: flex;
+    top: 10px;
     flex-direction: row;
   }
 }

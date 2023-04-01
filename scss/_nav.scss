@@ -1,52 +1,58 @@
+@use 'variables';
+
 .nav {
-  // position: absolute;
-  ul.drop-down-menu {
-    list-style: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  // border: 2px solid red; //marker
+  .drop-down-btn {
+    // border: 1px solid green;
+    width: 100%; //takes 100% of nav box
+    height: 50px;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
+    justify-content: end; //centers "navigation" textline
     align-items: center;
-    position: absolute; //position: absolute -> doesn't push header-image down
-    top: 0;
+    position: absolute;
     right: 0;
+    padding: 0 1.5rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  ul.drop-down-menu {
+    // border: 2px solid blue;
+    display: none;
+    list-style: none;
+    // display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    width: 100%; //ul takes 100% of nav box
+    top: 50px;
     z-index: 2;
     font-weight: 800;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 1.5rem;
     .drop-down-item {
-
-      padding: 1rem;
+      padding: 1rem 1.5rem;
     }
-
+    // Hover link styles
     .drop-down-item:hover {
       background-color: map-get($mapColorsOrange, orange5);
       color: black;
+      border-left: 3px solid map-get($mapColorsGray, gray8);
     }
 
-    .drop-down-item a {
-      color: inherit;
-    }
-
-    .drop-down-btn {
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      &::before {
-        font-family: "Font Awesome 6 Free";
-        content: "\f0c9";
-        font-weight: 600;
-        font-size: 4rem;
-        color: map-get($mapColorsBlue, blue7);
-        position: relative;
-        top: 5px;
-      }
-    }
-    .drop-down-btn:hover + .drop-down-item {
-      display: flex;
-    }
     a {
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 1.3rem;
-      padding-right: 1.5rem;
+      text-decoration: none; //removes link default underline
+      color: inherit; // changes default link color to black
     }
   }
 }
 
+.nav:hover .drop-down-menu {
+  display: flex;
+}
