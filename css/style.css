@@ -96,12 +96,8 @@
   grid-area: 8/2/9/3;
 }
 
-.map {
-  grid-area: 9/2/10/2;
-}
-
 .footer {
-  grid-area: 10/1/11/4;
+  grid-area: 9/1/10/4;
 }
 
 .nav {
@@ -701,6 +697,29 @@ body {
 
 p {
   margin: 1em;
+}
+
+.to-top {
+  position: relative;
+  left: -10%;
+  border: 2px solid;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #e9ba9e;
+  box-shadow: 8px 8px 13px -5px black;
+}
+.to-top a:active {
+  color: black;
+}
+.to-top a::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f102";
+  font-weight: 600;
+  font-size: 3.5rem;
+  position: absolute;
+  right: 16px;
+  top: 10px;
 }
 
 @media (min-width: 1000px) {
