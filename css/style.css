@@ -136,6 +136,7 @@
 }
 .nav ul.drop-down-menu .drop-down-item {
   padding: 1rem 1.5rem;
+  border-left: 3px solid rgba(0, 0, 0, 0);
 }
 .nav ul.drop-down-menu .drop-down-item:hover {
   background-color: #dea787;

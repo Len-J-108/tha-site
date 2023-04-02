@@ -38,6 +38,7 @@
     padding: 0 1.5rem;
     .drop-down-item {
       padding: 1rem 1.5rem;
+      border-left: 3px solid rgba(0, 0, 0, 0); //invisible border left, so the nav-items dont move on hover...
     }
     // Hover link styles
     .drop-down-item:hover {
