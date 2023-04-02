@@ -21,7 +21,10 @@
 
 @media (min-width: 830px) {
   .container-header {
-    height: 500px;
+    // height: 500px;
+    .header-image {
+      background-position: 0 -40px;
+    }
   }
   .container-alp-images {
     // border: 10px solid red;
@@ -30,7 +33,7 @@
     justify-content: center;
     grid-template-columns: 40% 40%;
 
-    div[class*="alp-image"] {
+    div[class*='alp-image'] {
       width: 250px;
       height: 250px;
     }
@@ -38,6 +41,11 @@
 }
 
 @media (min-width: 1000px) {
+  .container-header {
+    .header-image {
+      background-position: 0 -90px;
+
+    }
   .nav {
     .drop-down-btn {
       display: none;
@@ -49,10 +57,11 @@
     }
   }
 }
+}
 
 @media (min-width: 1400px) {
   .container-header {
-    height: 700px;
+    // height: 700px;
   }
 }
 
